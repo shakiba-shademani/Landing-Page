@@ -1,0 +1,13 @@
+.tr th,
+.tr td {
+  border: 1px solid gray;
+  padding: 1rem;
+}
+
+.tr th {
+  color: blue;
+}
+
+.ltr {
+  direction: ltr;
+}
