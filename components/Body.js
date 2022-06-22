@@ -7,22 +7,17 @@ import ParamsTable from "./ParamsTable";
 import NotTable from "./NotTable";
 import { useState } from "react";
 
+
 export default function Header() {
-  const [showPrivateTable, setShowPrivateTable] = useState(false);
-  const [showNotPrivateTable, setShowNotPrivateTable] = useState(false);
-  const [showGroupTable, setShowGroupTable] = useState(false);
-  const [showNotGroupTable, setShowNotGroupTable] = useState(false);
+  const [showPrivateTable, setShowPrivateTable] = useState(true);
+  const [showNotPrivateTable, setShowNotPrivateTable] = useState(true);
+  const [showGroupTable, setShowGroupTable] = useState(true);
+  const [showNotGroupTable, setShowNotGroupTable] = useState(true);
 
   return (
     <div className="flex flex-col mt-20 w-full lg:w-5/6 border-r border-gray-200">
       <div className="flex justify-between w-full lg:w-5/6 mt-4 h-20 p-4 border-b border-gray-200">
-        <p className="text-4xl"> ارسال پوش</p>
-        <button
-          className="bg-white border-2 border-slate-700 text-slate-700
-       hover:text-white hover:bg-pink-600 w-15 h-10 rounded p-2"
-        >
-          ویرایش
-        </button>
+        <p className="text-4xl mr-4"> ارسال پوش</p>
       </div>
       <div className="flex w-full max-w-full">
         <div className="pt-4 px-8 max-w-full md:border-l md:w-9/12 border-gray-200 leading-8">
@@ -34,7 +29,7 @@ export default function Header() {
           <p>
             <br />
           </p>
-          <blockquote className="bg-red-100 border-r border-yellow-400 my-4 mx-8 py-4">
+          <blockquote className="bg-yellow-100 border-r border-yellow-400 my-4 mx-8 py-4">
             <p className="px-4 py-4">
               <code className="bg-green-100 text-red-500">نکته:</code>
               <span className="bg-blue-100">
@@ -43,7 +38,7 @@ export default function Header() {
               <a className="text-blue-500">راهنمای استفاده</a> را مطالعه کنید.
             </p>
           </blockquote>
-          <blockquote className="bg-red-100 border-r border-yellow-400 my-4 mx-8 py-4">
+          <blockquote className="bg-yellow-100 border-r border-yellow-400 my-4 mx-8 py-4">
             <p className="px-4 py-4 leading-8">
               <code className="bg-green-100 text-red-500">نکته:</code>
               توجه داشته باشید که <strong>پیام چابک</strong> به طور پیش‌فرض شامل{" "}
@@ -59,7 +54,7 @@ export default function Header() {
             <br />
           </p>
           <h3 className="mb-4 mt-8">
-            <a className="text-2xl" href="#ارسال-شخصی">
+            <a className="text-2xl" href="#ارسال-شخصی" id="privateSend">
               ارسال شخصی
             </a>
           </h3>
@@ -73,13 +68,13 @@ export default function Header() {
             ) پوش بفرستید:
           </p>
           <div className="mb-4">
-            <span className="bg-blue-500 text-white p-1 rounded">POST</span>
+            <span className="bg-yellow-300 text-black font-bold p-1 rounded">POST</span>
             <a className="text-2xl" href="#">
               {" "}
               ارسال شخصی پیام چابک
             </a>
           </div>
-          <p className="mb-4 text-justify leading-8">
+          <p className="mb-4 text-justify leading-8" id="pSendMessage">
             برای ارسال شخصی پیام چابک می‌توانید از لینک
             <code className="bg-gray-200 text-red-600 border-gray-500 px-2 rounded break-words">
               https://sandbox.push.adpdigital.com/api/push/toUsers
@@ -155,7 +150,7 @@ export default function Header() {
           </div>
           {showNotPrivateTable ? <NotTable /> : null}
 
-          <div className="text-2xl my-4">
+          <div className="text-2xl my-4" id="pSendMessageOne">
             <a href="#">مثال ارسال شخصی پیام چابک به یک کاربر</a>
           </div>
           <p>
@@ -178,7 +173,7 @@ export default function Header() {
               </code>
             </pre>
           </div>
-          <div className="text-2xl my-4">
+          <div className="text-2xl my-4" id="pSendMessageTwo">
             <a href="#">مثال ارسال شخصی پیام چابک به چند کاربر با یک محتوا</a>
           </div>
           <p>
@@ -212,12 +207,12 @@ export default function Header() {
               </code>
             </pre>
           </div>
-          <div className="text-2xl my-4">
+          <div className="text-2xl my-4"  >
             <a href="#">
               مثال ارسال شخصی پیام چابک به چند کاربر با محتواهای متفاوت
             </a>
           </div>
-          <p>
+          <p id="pSendMessageThree">
             برای ارسال پیام چابک به به چند شناسه کاربری با محتواهای متفاوت
             می‌توانید از روش زیر استفاده کنید:
           </p>
@@ -268,14 +263,14 @@ export default function Header() {
           </div>
 
           <div className="mb-4 mt-12">
-            <span className="bg-blue-500 text-white p-1 rounded">POST</span>
+            <span className="bg-yellow-300 text-black font-bold p-1 rounded">POST</span>
             <a className="text-2xl" href="#">
               {" "}
               ارسال شخصی نوتیفیکیشن
             </a>
           </div>
 
-          <p className="mb-4 text-justify leading-8">
+          <p className="mb-4 text-justify leading-8" id="pSendMessageNot">
             برای ارسال شخصی نوتیفیکیشن می‌توانید از لینک{" "}
             <code className="bg-gray-200 text-red-600 border-gray-500 px-2 rounded break-words">
               https://sandbox.push.adpdigital.com/api/push/notifyUsers
@@ -297,7 +292,7 @@ export default function Header() {
               </code>
             </pre>
           </div>
-          <blockquote className="bg-red-100 border-r border-yellow-400 my-8 mx-8 py-4">
+          <blockquote className="bg-yellow-100 border-r border-yellow-400 my-8 mx-8 py-4">
             <p className="px-4 py-4">
               <code className="bg-green-100 text-red-500"> نکته:</code> متد
               ارسال نوتیفیکیشن پی‌لودهای ارسال پیام چابک را پشتیبانی می‌کند،
@@ -311,7 +306,7 @@ export default function Header() {
           <div className="text-2xl mt-16">
             <a href="#">ارسال گروهی</a>
           </div>
-          <p>
+          <p id="groupSend">
             این قسمت مخصوص ارسال گروهی یا اجرای کمپین است. پیام گروهی به شما
             امکان می‌دهد به یک سگمنتی (سگمنت‌ آی‌دی یا فیلترهای سگمنت) پوش
             بفرستید:
@@ -324,13 +319,13 @@ export default function Header() {
             اینجا را مطالعه کنید.
           </p>
           <div className="my-8">
-            <span className="bg-blue-500 text-white p-1 rounded">POST</span>
+            <span className="bg-yellow-300 text-black font-bold p-1 rounded">POST</span>
             <a className="text-2xl" href="#">
               {" "}
               ارسال گروهی پیام چابک
             </a>
           </div>
-          <p className="mb-4 text-justify leading-8">
+          <p className="mb-4 text-justify leading-8" id="gSendMessage">
             برای ارسال گروهی پیام چابک می‌توانید از لینک
             <code className="bg-gray-200 text-red-600 border-gray-500 px-2 rounded break-words">
               https://sandbox.push.adpdigital.com/api/push/byQuery
@@ -378,7 +373,7 @@ export default function Header() {
           <div className="text-2xl mt-8">
             <a>مثال ارسال گروهی پیام چابک</a>
           </div>
-          <p>
+          <p id="gSendMessageOne">
             نمونه زیر یک cURL معتبر از ارسال پیام چابک گروهی است. گروه مخاطب این
             پیام، خانم‌هایی هستند که بیش از یک بار خرید داشته‌اند و از موبایل
             (دستگاه‌های اندروید و آی‌اواس) استفاده می‌کنند.
@@ -399,14 +394,14 @@ export default function Header() {
           </div>
 
           <div className="mb-4 mt-12">
-            <span className="bg-blue-500 text-white p-1 rounded">POST</span>
+            <span className="bg-yellow-300 text-black font-bold p-1 rounded">POST</span>
             <a className="text-2xl" href="#">
               {" "}
               ارسال گروهی نوتیفیکیشن
             </a>
           </div>
 
-          <p className="mb-4 text-justify leading-8">
+          <p className="mb-4 text-justify leading-8" id="gSendMessageNot">
             برای ارسال گروهی نوتیفیکیشن می‌توانید از لینک{" "}
             <code className="bg-gray-200 text-red-600 border-gray-500 px-2 rounded break-words">
               https://sandbox.push.adpdigital.com/api/push/notifyUsers
@@ -428,7 +423,7 @@ export default function Header() {
               </code>
             </pre>
           </div>
-          <blockquote className="bg-red-100 border-r border-yellow-400 my-8 mx-8 py-4">
+          <blockquote className="bg-yellow-100 border-r border-yellow-400 my-8 mx-8 py-4">
             <p className="px-4 py-4">
               <code className="bg-green-100 text-red-500"> نکته:</code> متد
               ارسال نوتیفیکیشن پی‌لودهای ارسال پیام چابک را پشتیبانی می‌کند،
@@ -442,10 +437,10 @@ export default function Header() {
           <div className="text-3xl mb-4 mt-24">
             <a>نحوه استفاده از سگمنت ها در API</a>
           </div>
-          <p className="mb-8">
+          <p className="mb-8" id="API">
             هر سگمنت می‌تواند شامل یک یا چند شرط (<strong>rule</strong>) باشد.
           </p>
-          <div className="text-2xl mb-4">
+          <div className="text-2xl mb-4" id="conditions">
             <a>شرط ها</a>
           </div>
           <p>هر شرط شامل ۳ قسمت اصلی می‌باشد:</p>
@@ -475,7 +470,7 @@ export default function Header() {
               </p>
             </li>
           </ul>
-          <div className="text-2xl my-4">
+          <div className="text-2xl my-4" id="operators">
             <a> عملوند های مجاز(operators)</a>
           </div>
           <ul className="list-disc mr-6">
@@ -560,7 +555,7 @@ export default function Header() {
               </p>
             </li>
           </ul>
-          <blockquote className="bg-red-100 border-r border-yellow-400 my-8 mx-8 py-4">
+          <blockquote className="bg-yellow-100 border-r border-yellow-400 my-8 mx-8 py-4">
             <p className="px-4 py-4">
               <code className="bg-green-100 text-red-500">نکته:</code>{" "}
               عملوند‌های{" "}
@@ -574,7 +569,7 @@ export default function Header() {
               <code className="bg-green-100 text-red-500">'value: '6h</code>.
             </p>
           </blockquote>
-          <div className="text-2xl mb-4">
+          <div className="text-2xl mb-4" id="names">
             <a>nameهای مجاز</a>
           </div>
           <ul className="list-disc my-4 mr-6">
@@ -640,7 +635,7 @@ export default function Header() {
             <strong>بعد از ۶ ساعت پیش</strong>، برنامه‌ را نصب کرده‌اند و{" "}
             <strong>بیش از ۲ بار</strong> هم آن را باز نموده‌اند:
           </p>
-          <div className="text-2xl mb-4 px-4">
+          <div className="text-2xl mb-4 px-4" id="ex">
             <a>نمونه</a>
           </div>
           <div className={styles.ltr}>

@@ -55,7 +55,7 @@ export default function Sidebar() {
     <div className="lg:w-1/6 mt-20 overflow-x-hidden overflow-y-auto block font-semibold">
       {topics.map((i) => (
         <nav key={i.id} className=" bg-yellow-100">
-          <div className="flex justify-between items-center border-b border-gray-300 py-4 px-2 ">
+          <div className="flex justify-between items-center border-b border-gray-300 py-4 px-2">
             <div className="w-6 h-10">
               <Image src={i.src} />
             </div>

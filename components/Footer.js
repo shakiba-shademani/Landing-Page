@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="py-12 flex flex-wrap border-box">
           <div className="flex justify-around w-2/3">
             <nav className="flex flex-col text-right relative">
-              <div className="text-gray-500 text-xl mb-2">پلتفرم چابک</div>
+              <div className="text-yellow-300 text-xl mb-2">پلتفرم چابک</div>
               <a href="#">چابک ترکر</a>
               <a href="#">چابک پوش</a>
               <a href="#">پلتفرم‌ها</a>
@@ -13,7 +13,7 @@ export default function Footer() {
               <a href="#">درباره ما</a>
             </nav>
             <nav className="flex flex-col text-right relative">
-              <div className="text-gray-500 text-xl mb-2">توسعه دهندگان</div>
+              <div className="text-yellow-300 text-xl mb-2">توسعه دهندگان</div>
               <a href="#">ورود به پنل</a>
               <a href="#">مستندات</a>
               <a href="#">نمونه کد اندروید</a>
@@ -21,7 +21,7 @@ export default function Footer() {
               <a href="#"> API</a>
             </nav>
             <nav className="flex flex-col text-right relative">
-              <div className="text-gray-500 text-xl mb-2">پشتیبانی</div>
+              <div className="text-yellow-300 text-xl mb-2">پشتیبانی</div>
               <a href="#">اندروید</a>
               <a href="#">iOS</a>
               <a href="#">جاوا اسکریپت</a>
@@ -41,7 +41,7 @@ export default function Footer() {
               />
               <div className="">
                 <button
-                  className="text-white mr:-px p-2 bg-pink-600"
+                  className="-mr-[1px] p-2 bg-yellow-300 text-black font-bold"
                   type="button"
                 >
                   ثبت نام

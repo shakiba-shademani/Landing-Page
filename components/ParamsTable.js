@@ -114,7 +114,7 @@ export default function ParamsTable() {
         </tbody>
       </table>
 
-      <blockquote className="bg-red-100 border-r border-yellow-400 my-4 mx-8 py-4">
+      <blockquote className="bg-yellow-100 border-r border-yellow-400 my-4 mx-8 py-4">
         <p className="px-4 py-4 leading-8">
           <code className="bg-green-100 text-red-500">نکته :</code> نماد{" "}
           <font color="red">*</font> در جدول پارامترها به معنی{" "}
@@ -124,7 +124,7 @@ export default function ParamsTable() {
         </p>
       </blockquote>
 
-      <blockquote className="bg-red-100 border-r border-yellow-400 my-4 mx-8 py-4">
+      <blockquote className="bg-yellow-100 border-r border-yellow-400 my-4 mx-8 py-4">
         <p className="px-4 py-4 leading-8">
           <code className="bg-green-100 text-red-500">نکته:</code> نام کانال به
           صورت پیش‌فرض به عنوان کانال عمومی (

@@ -19,3 +19,7 @@
   color: rgb(128, 128, 128);
   padding: 0 0.5em;
 }
+
+.shadow {
+  text-shadow: 0 0 5px #fde047;
+}
